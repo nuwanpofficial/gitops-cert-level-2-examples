@@ -25,10 +25,10 @@ spec:
   ignoreDifferences:
     - group: apps
       kind: Deployment
-      jqPathExpressions:
-        - .metadata.annotations.creation
+      jsonPointers:
+        - /metadata/annotations/creation
     - group: ''
       kind: Secret
-      jqPathExpressions:
-        - .data.my-password
+      jsonPointers:
+        - /data/my-password
    
